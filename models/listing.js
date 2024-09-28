@@ -10,13 +10,8 @@ const listingSchema = new Schema({
   },
   description: String,
   image: {
-    type: String,
-    default:
-      "https://www.istockphoto.com/photo/the-wolf-within-gm182773297-12725226",
-    set: (v) =>
-      v === ""
-        ? "https://www.istockphoto.com/photo/the-wolf-within-gm182773297-12725226"
-        : v,
+    url: String,
+    filename: String,
   },
   price: Number,
   location: String,
